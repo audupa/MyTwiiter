@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Login Application</title>
+    <title>Twitter Login</title>
 </head>
 <body>
 <table cellpadding='2' cellspacing='0' border='0' id='ap_table'>
