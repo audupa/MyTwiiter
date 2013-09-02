@@ -1,5 +1,6 @@
 package com.intuit.classes;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,9 +10,22 @@ import java.util.Date;
  * Time: 2:22 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Tweet {
+public class Tweet implements Serializable {
 
     private int id;
+    private String tweetMessage;
+    private Date created_date;
+    private Date updated_date;
+    private  int userId;
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+
 
     public int getId() {
         return id;
@@ -21,12 +35,12 @@ public class Tweet {
         this.id = id;
     }
 
-    public String getTweet() {
-        return tweet;
+    public String getTweetMessage() {
+        return tweetMessage;
     }
 
-    public void setTweet(String tweet) {
-        this.tweet = tweet;
+    public void setTweetMessage(String tweetMessage) {
+        this.tweetMessage = tweetMessage;
     }
 
     public Date getCreated_date() {
@@ -37,6 +51,13 @@ public class Tweet {
         this.created_date = created_date;
     }
 
-    private String tweet;
-    private Date created_date;
+    public Date getUpdated_date() {
+        return updated_date;
+    }
+
+    public void setUpdated_date(Date updated_date) {
+        this.updated_date = updated_date;
+    }
+
+
 }

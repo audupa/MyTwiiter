@@ -12,7 +12,7 @@
                     <input type="hidden" name="action" value="login">
                     <input type="hidden" name="hide" value="">
                     <center><table>
-                        <tr><td><font face="verdana,arial" size=-1>Username:</font></td><td><input type="text" name="login"></td></tr>
+                        <tr><td><font face="verdana,arial" size=-1>Akshatha:</font></td><td><input type="text" name="login"></td></tr>
                         <tr><td><font face="verdana,arial" size=-1>Password:</font></td><td><input type="password" name="password"></td></tr>
                         <tr><td><font face="verdana,arial" size=-1>&nbsp;</font></td><td><font face="verdana,arial" size=-1><input type="submit" value="Login"></font></td></tr>
                         <tr><td colspan=2><font face="verdana,arial" size=-1>&nbsp;</font></td></tr>

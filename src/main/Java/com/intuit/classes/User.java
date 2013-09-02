@@ -1,5 +1,7 @@
 package com.intuit.classes;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: AUDUPA
@@ -20,6 +22,27 @@ public class User {
     private int id;
     private String userName;
     private String password;
+    private String emailId;
+
+    public Date getCreated_date() {
+        return created_date;
+    }
+
+    public void setCreated_date(Date created_date) {
+        this.created_date = created_date;
+    }
+
+    private Date created_date;
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+
 
     public String getUserName() {
         return userName;

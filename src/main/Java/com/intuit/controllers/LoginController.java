@@ -32,15 +32,8 @@ public class LoginController {
     public void setDataSource(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
-    @RequestMapping("/login")
+    @RequestMapping("login")
     public ModelAndView showLoginPage(@RequestParam("login") String userName, @RequestParam("password") String password) {
-
-       /* String sql = "select * from users where user_name = ? and password = ? ";
-        if(jdbcTemplate.queryForInt(sql, new Object[] { username,password } ,User.class)==1)
-            return "loginsuccess";
-        else
-            return "loginFailure";*/
-
 
         try {
             User user = (User) this.jdbcTemplate.queryForObject(
@@ -48,7 +41,6 @@ public class LoginController {
                     new Object[] { userName, password },
                     new BeanPropertyRowMapper(User.class));
             if(user!=null)
-                //return "loginsuccess";
                 return new ModelAndView("loginsuccess","user",user);
             else
                 return new ModelAndView("loginFailure");
@@ -56,18 +48,6 @@ public class LoginController {
             return null;
         }
     }
-
-
-
-
-   /* @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView helloWorld(){
-
-        ModelAndView model = new ModelAndView("HelloWorldPage");
-        model.addObject("msg", "hello world");
-
-        return model;
-    }*/
 
 
 }

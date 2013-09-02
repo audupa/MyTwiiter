@@ -7,7 +7,6 @@
    User user=(User)request.getAttribute("user");%>
 <%int id=user.getId();%>
 <%String name=user.getUserName();%>
-
 <head>
     <meta charset="utf-8" />
     <title>jQuery UI Sortable - Default functionality</title>
@@ -17,10 +16,13 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link href="/css/loginTest.css" media="screen" rel="stylesheet" type="text/css" />
+
     <style>
         #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
         #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
         #sortable li span { position: absolute; margin-left: -1.3em; }
+
     </style>
     <script>
         $(function() {
@@ -38,7 +40,6 @@
     </script>
 </head>
 <body>
-
 
 <div id="tabs">
     <ul>
