@@ -2,10 +2,10 @@
   <artifact type="exploded-war" name="Mytest:war exploded">
     <output-path>$PROJECT_DIR$/target/Mytest</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="MyTwitter/web/Web" />
+      <element id="javaee-facet-resources" facet="Twitter/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="MyTwitter" />
+          <element id="module-output" name="Twitter" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />

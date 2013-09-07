@@ -1,5 +1,7 @@
 package com.intuit.classes;
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,12 +12,33 @@ import java.util.Date;
  * Time: 2:22 PM
  * To change this template use File | Settings | File Templates.
  */
+@Component
 public class Tweet implements Serializable {
 
     private int id;
     private String tweetMessage;
-    private Date created_date;
-    private Date updated_date;
+
+
+
+    private Date createdDate;
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(Date updatedDate) {
+        this.updatedDate = updatedDate;
+    }
+
+    private Date updatedDate;
     private  int userId;
     public int getUserId() {
         return userId;
@@ -42,22 +65,5 @@ public class Tweet implements Serializable {
     public void setTweetMessage(String tweetMessage) {
         this.tweetMessage = tweetMessage;
     }
-
-    public Date getCreated_date() {
-        return created_date;
-    }
-
-    public void setCreated_date(Date created_date) {
-        this.created_date = created_date;
-    }
-
-    public Date getUpdated_date() {
-        return updated_date;
-    }
-
-    public void setUpdated_date(Date updated_date) {
-        this.updated_date = updated_date;
-    }
-
 
 }

@@ -3,10 +3,10 @@
 <html lang="en">
 
 <%@page import="com.intuit.classes.User"%>
-<%
-   User user=(User)request.getAttribute("user");%>
+<%--<%
+   User user=(User)request.getAttribute("userName");%>
 <%int id=user.getId();%>
-<%String name=user.getUserName();%>
+<%String name=user.getUserName();%>--%>
 <head>
     <meta charset="utf-8" />
     <title>jQuery UI Sortable - Default functionality</title>
@@ -55,7 +55,7 @@
 
         <div >
             <img src = "contact.jpg" height = "100"  width ="100">
-            <p> Hello <%out.print(name);%> </p>
+
 
         </div>
 

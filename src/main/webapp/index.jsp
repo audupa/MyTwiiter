@@ -1,3 +1,4 @@
+<%--
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -26,3 +27,46 @@
 
 </body>
 </html>
+--%>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="loginForm1.css">
+</head>
+<body>
+<div id="loginContent">
+    <section class="dialog-outer">
+        <div class="dialog">
+
+            <header>
+                <h1 class="logo">Tastebuddy</h1>
+
+            </header>
+
+
+
+
+
+            <div class="dialog-main">
+
+
+
+                <form method="POST" id="login-form" class="adjacent" action="/login">
+                    <p><label for="id_username">Username:</label> <input name="userName" maxlength="30" autocapitalize="off" autocorrect="off" type="text" id="id_username" /></p>
+                    <p><label for="id_password">Password:</label> <input autocapitalize="off" autocorrect="off" type="password" name="password" id="id_password" /></p>
+                    <p class="form-actions">
+                        <a href="/accounts/password/reset/">Forgot password?</a>
+                        <input type="submit" class="button-green" value="Log in" />
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
+

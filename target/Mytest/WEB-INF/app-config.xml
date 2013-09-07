@@ -14,7 +14,7 @@
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
 
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
-    <context:component-scan base-package="com.intuit.controllers"/>
+    <!--<context:component-scan base-package="com.intuit"/>-->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -43,8 +43,31 @@
     </bean>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <constructor-arg index="0" ref="dataSource"/>
-        <constructor-arg index="1" value="false"/>
+        <!--<constructor-arg index="0" ref="dataSource"/>
+        <constructor-arg index="1" value="false"/>-->
+        <constructor-arg>
+            <ref bean="dataSource" />
+        </constructor-arg>
     </bean>
+
+    <bean id="simpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+        <constructor-arg><ref bean="dataSource"/></constructor-arg>
+    </bean>
+
+
+    <!--<bean id="renderErrorResponse" class="com.intuit.util.RenderErrorResponse">
+    </bean>-->
+
+    <bean id="baseDAO"  class ="com.intuit.dao.impl.BaseDAOImpl">
+        <!--<property name="jdbcTemplate" ref="jdbcTemplate" />-->
+    </bean>
+
+    <bean id="userDAO"  class="com.intuit.dao.impl.UserDAOImpl" parent="baseDAO" />
+    <bean id="tweetDAO"  class="com.intuit.dao.impl.TweetDAOImpl" parent="baseDAO" />
+
+
+    <!--<bean class="com.intuit.controllers.impl.LoginControllerImpl" />
+    <bean class="com.intuit.controllers.impl.UserControllerImpl" />
+    <bean class="com.intuit.controllers.impl.TweetControllerImpl" />-->
 
 </beans>

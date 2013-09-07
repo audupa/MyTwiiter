@@ -1,5 +1,8 @@
 package com.intuit.classes;
 
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,7 +12,8 @@ import java.util.Date;
  * Time: 12:21 PM
  * To change this template use File | Settings | File Templates.
  */
-public class User {
+@Component
+public class User implements Serializable {
 
     public int getId() {
         return id;

@@ -26,6 +26,7 @@
         <processorPath useClasspath="true" />
         <module name="Mytest" />
         <module name="MyTwitter" />
+        <module name="Twitter" />
       </profile>
     </annotationProcessing>
   </component>
